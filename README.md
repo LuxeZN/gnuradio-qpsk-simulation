@@ -1,6 +1,6 @@
 # gnuradio-qpsk-simulation
 
-A GNU Radio flowgraph that simulates a bidirectional QPSK packet radio link entirely in software, using a ZeroMQ pub/sub loopback in place of real RF hardware (e.g. USRPs).
+A GNU Radio flowgraph that simulates a QPSK packet radio link entirely in software, using a ZeroMQ pub/sub loopback in place of real RF hardware (e.g. USRPs).
 
 ## Overview
 
