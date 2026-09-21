@@ -241,25 +241,6 @@ blocks:
     coordinate: [392, 224.0]
     rotation: 0
     state: true
-- name: blocks_tag_debug_0
-  id: blocks_tag_debug
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    display: 'True'
-    filter: corr
-    name: Correlate Access Code - Debug
-    num_inputs: '1'
-    type: byte
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1048, 1336.0]
-    rotation: 180
-    state: enabled
 - name: blocks_tagged_stream_mux_0
   id: blocks_tagged_stream_mux
   parameters:
@@ -329,21 +310,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [1112, 1192.0]
-    rotation: 180
-    state: enabled
-- name: blocks_uchar_to_float_0_0_0_0
-  id: blocks_uchar_to_float
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1520, 1192.0]
     rotation: 180
     state: enabled
 - name: blocks_uchar_to_float_0_0_0_1
@@ -1042,7 +1008,7 @@ blocks:
     ctrlpanel: 'False'
     entags: 'True'
     grid: 'False'
-    gui_hint: tab@4:0,2,1,1
+    gui_hint: tab@4:2,0,1,1
     label1: ''
     label10: ''
     label2: ''
@@ -1106,103 +1072,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [1048, 1232.0]
-    rotation: 0
-    state: enabled
-- name: qtgui_time_sink_x_0_0_0
-  id: qtgui_time_sink_x
-  parameters:
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'False'
-    axislabels: 'True'
-    color1: blue
-    color10: dark blue
-    color2: red
-    color3: green
-    color4: black
-    color5: cyan
-    color6: magenta
-    color7: yellow
-    color8: dark red
-    color9: dark green
-    comment: ''
-    ctrlpanel: 'False'
-    entags: 'True'
-    grid: 'False'
-    gui_hint: tab@4:0,3,1,1
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    marker1: '-1'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: Output of CRC Check
-    nconnections: '1'
-    size: '256'
-    srate: samp_rate
-    stemplot: 'False'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    tr_chan: '0'
-    tr_delay: '0.0'
-    tr_level: '0.1'
-    tr_mode: qtgui.TRIG_MODE_TAG
-    tr_slope: qtgui.TRIG_SLOPE_POS
-    tr_tag: corr
-    type: float
-    update_time: '0.10'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    ylabel: Amplitude
-    ymax: '1.1'
-    ymin: '-0.1'
-    yunit: '""'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1472, 1232.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0_0_1
@@ -1333,7 +1202,7 @@ blocks:
     ctrlpanel: 'False'
     entags: 'True'
     grid: 'True'
-    gui_hint: tab@4:0,1,1,1
+    gui_hint: tab@4:1,0,1,1
     label1: ''
     label10: ''
     label2: ''
@@ -1702,7 +1571,6 @@ connections:
 - [blocks_throttle2_0, '0', blocks_stream_to_tagged_stream_0, '0']
 - [blocks_uchar_to_float_0_0, '0', qtgui_time_sink_x_0_2, '0']
 - [blocks_uchar_to_float_0_0_0, '0', qtgui_time_sink_x_0_0, '0']
-- [blocks_uchar_to_float_0_0_0_0, '0', qtgui_time_sink_x_0_0_0, '0']
 - [blocks_uchar_to_float_0_0_0_1, '0', qtgui_time_sink_x_0_0_1, '0']
 - [blocks_uchar_to_float_0_0_0_1_0, '0', qtgui_time_sink_x_0_0_1_0, '0']
 - [blocks_unpack_k_bits_bb_0, '0', blocks_uchar_to_float_0_0_0_1_0, '0']
@@ -1712,14 +1580,12 @@ connections:
 - [digital_constellation_modulator_0, '0', qtgui_const_sink_x_1, '0']
 - [digital_constellation_modulator_0, '0', virtual_sink_2, '0']
 - [digital_correlate_access_code_xx_ts_0, '0', blocks_repack_bits_bb_1_0, '0']
-- [digital_correlate_access_code_xx_ts_0, '0', blocks_tag_debug_0, '0']
 - [digital_correlate_access_code_xx_ts_0, '0', blocks_uchar_to_float_0_0_0, '0']
 - [digital_costas_loop_cc_0, '0', digital_linear_equalizer_0, '0']
 - [digital_costas_loop_cc_0, '0', qtgui_const_sink_x_0_0_0, '0']
 - [digital_crc32_bb_0, '0', digital_protocol_formatter_bb_0, '0']
 - [digital_crc32_bb_0, '0', virtual_sink_0_0, '0']
 - [digital_crc32_bb_0_0, '0', blocks_file_sink_0, '0']
-- [digital_crc32_bb_0_0, '0', blocks_uchar_to_float_0_0_0_0, '0']
 - [digital_diff_decoder_bb_0, '0', blocks_uchar_to_float_0_0_0_1, '0']
 - [digital_diff_decoder_bb_0, '0', digital_map_bb_0, '0']
 - [digital_linear_equalizer_0, '0', qtgui_const_sink_x_0_0_0_0, '0']

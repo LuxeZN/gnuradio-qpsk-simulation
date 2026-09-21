@@ -217,10 +217,10 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0_0_1_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_0_1_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0_1_0.qwidget(), Qt.QWidget)
-        self.tab_grid_layout_4.addWidget(self._qtgui_time_sink_x_0_0_1_0_win, 0, 1, 1, 1)
-        for r in range(0, 1):
+        self.tab_grid_layout_4.addWidget(self._qtgui_time_sink_x_0_0_1_0_win, 1, 0, 1, 1)
+        for r in range(1, 2):
             self.tab_grid_layout_4.setRowStretch(r, 1)
-        for c in range(1, 2):
+        for c in range(0, 1):
             self.tab_grid_layout_4.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0_0_1 = qtgui.time_sink_f(
             256, #size
@@ -274,58 +274,6 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
             self.tab_grid_layout_4.setRowStretch(r, 1)
         for c in range(0, 1):
             self.tab_grid_layout_4.setColumnStretch(c, 1)
-        self.qtgui_time_sink_x_0_0_0 = qtgui.time_sink_f(
-            256, #size
-            samp_rate, #samp_rate
-            'Output of CRC Check', #name
-            1, #number of inputs
-            None # parent
-        )
-        self.qtgui_time_sink_x_0_0_0.set_update_time(0.10)
-        self.qtgui_time_sink_x_0_0_0.set_y_axis(-0.1, 1.1)
-
-        self.qtgui_time_sink_x_0_0_0.set_y_label('Amplitude', "")
-
-        self.qtgui_time_sink_x_0_0_0.enable_tags(True)
-        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.1, 0.0, 0, 'corr')
-        self.qtgui_time_sink_x_0_0_0.enable_autoscale(False)
-        self.qtgui_time_sink_x_0_0_0.enable_grid(False)
-        self.qtgui_time_sink_x_0_0_0.enable_axis_labels(True)
-        self.qtgui_time_sink_x_0_0_0.enable_control_panel(False)
-        self.qtgui_time_sink_x_0_0_0.enable_stem_plot(False)
-
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ['blue', 'red', 'green', 'black', 'cyan',
-            'magenta', 'yellow', 'dark red', 'dark green', 'dark blue']
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-        styles = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        markers = [-1, -1, -1, -1, -1,
-            -1, -1, -1, -1, -1]
-
-
-        for i in range(1):
-            if len(labels[i]) == 0:
-                self.qtgui_time_sink_x_0_0_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_time_sink_x_0_0_0.set_line_label(i, labels[i])
-            self.qtgui_time_sink_x_0_0_0.set_line_width(i, widths[i])
-            self.qtgui_time_sink_x_0_0_0.set_line_color(i, colors[i])
-            self.qtgui_time_sink_x_0_0_0.set_line_style(i, styles[i])
-            self.qtgui_time_sink_x_0_0_0.set_line_marker(i, markers[i])
-            self.qtgui_time_sink_x_0_0_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_time_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0_0.qwidget(), Qt.QWidget)
-        self.tab_grid_layout_4.addWidget(self._qtgui_time_sink_x_0_0_0_win, 0, 3, 1, 1)
-        for r in range(0, 1):
-            self.tab_grid_layout_4.setRowStretch(r, 1)
-        for c in range(3, 4):
-            self.tab_grid_layout_4.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
             256, #size
             samp_rate, #samp_rate
@@ -373,10 +321,10 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0.qwidget(), Qt.QWidget)
-        self.tab_grid_layout_4.addWidget(self._qtgui_time_sink_x_0_0_win, 0, 2, 1, 1)
-        for r in range(0, 1):
+        self.tab_grid_layout_4.addWidget(self._qtgui_time_sink_x_0_0_win, 2, 0, 1, 1)
+        for r in range(2, 3):
             self.tab_grid_layout_4.setRowStretch(r, 1)
-        for c in range(2, 3):
+        for c in range(0, 1):
             self.tab_grid_layout_4.setColumnStretch(c, 1)
         self.qtgui_const_sink_x_1 = qtgui.const_sink_c(
             1024, #size
@@ -593,13 +541,10 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
         self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(2)
         self.blocks_uchar_to_float_0_0_0_1_0 = blocks.uchar_to_float()
         self.blocks_uchar_to_float_0_0_0_1 = blocks.uchar_to_float()
-        self.blocks_uchar_to_float_0_0_0_0 = blocks.uchar_to_float()
         self.blocks_uchar_to_float_0_0_0 = blocks.uchar_to_float()
         self.blocks_uchar_to_float_0_0 = blocks.uchar_to_float()
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_char*1, (samp_rate * 32), True, 0 if "auto" == "auto" else max( int(float(0.1) * (samp_rate * 32)) if "auto" == "time" else int(0.1), 1) )
         self.blocks_tagged_stream_mux_0 = blocks.tagged_stream_mux(gr.sizeof_char*1, 'packet_len', 0)
-        self.blocks_tag_debug_0 = blocks.tag_debug(gr.sizeof_char*1, 'Correlate Access Code - Debug', 'corr')
-        self.blocks_tag_debug_0.set_display(True)
         self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_char, 1, 60, "packet_len")
         self.blocks_repack_bits_bb_1_0 = blocks.repack_bits_bb(1, 8, 'corr', False, gr.GR_MSB_FIRST)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, "test.txt", True, 0, 0)
@@ -619,7 +564,6 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))
         self.connect((self.blocks_uchar_to_float_0_0, 0), (self.qtgui_time_sink_x_0_2, 0))
         self.connect((self.blocks_uchar_to_float_0_0_0, 0), (self.qtgui_time_sink_x_0_0, 0))
-        self.connect((self.blocks_uchar_to_float_0_0_0_0, 0), (self.qtgui_time_sink_x_0_0_0, 0))
         self.connect((self.blocks_uchar_to_float_0_0_0_1, 0), (self.qtgui_time_sink_x_0_0_1, 0))
         self.connect((self.blocks_uchar_to_float_0_0_0_1_0, 0), (self.qtgui_time_sink_x_0_0_1_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.blocks_uchar_to_float_0_0_0_1_0, 0))
@@ -629,14 +573,12 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
         self.connect((self.digital_constellation_modulator_0, 0), (self.qtgui_const_sink_x_1, 0))
         self.connect((self.digital_constellation_modulator_0, 0), (self.zeromq_pub_sink_0, 0))
         self.connect((self.digital_correlate_access_code_xx_ts_0, 0), (self.blocks_repack_bits_bb_1_0, 0))
-        self.connect((self.digital_correlate_access_code_xx_ts_0, 0), (self.blocks_tag_debug_0, 0))
         self.connect((self.digital_correlate_access_code_xx_ts_0, 0), (self.blocks_uchar_to_float_0_0_0, 0))
         self.connect((self.digital_costas_loop_cc_0, 0), (self.digital_linear_equalizer_0, 0))
         self.connect((self.digital_costas_loop_cc_0, 0), (self.qtgui_const_sink_x_0_0_0, 0))
         self.connect((self.digital_crc32_bb_0, 0), (self.blocks_tagged_stream_mux_0, 1))
         self.connect((self.digital_crc32_bb_0, 0), (self.digital_protocol_formatter_bb_0, 0))
         self.connect((self.digital_crc32_bb_0_0, 0), (self.blocks_file_sink_0, 0))
-        self.connect((self.digital_crc32_bb_0_0, 0), (self.blocks_uchar_to_float_0_0_0_0, 0))
         self.connect((self.digital_diff_decoder_bb_0, 0), (self.blocks_uchar_to_float_0_0_0_1, 0))
         self.connect((self.digital_diff_decoder_bb_0, 0), (self.digital_map_bb_0, 0))
         self.connect((self.digital_linear_equalizer_0, 0), (self.digital_constellation_decoder_cb_0, 0))
@@ -698,7 +640,6 @@ class qpsk_sim_with_filters(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.blocks_throttle2_0.set_sample_rate((self.samp_rate * 32))
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
-        self.qtgui_time_sink_x_0_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0_1.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0_1_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_2.set_samp_rate(self.samp_rate)
